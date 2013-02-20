@@ -1,6 +1,7 @@
 <?php
 
     require('db.php');
+    require_once('Readability.php');
 
     /**
      * Determine the HTTP-verb-derived method to call
@@ -85,6 +86,26 @@
 
         header($header);
         die($msg . '.');
+    }
+
+    /**
+     * Get content from URL
+     **/
+    function getContentFromUrl($url)
+    {
+        //Get content and clean it up
+        $html = file_get_contents($url);
+        if (function_exists('tidy_parse_string')) {
+            $tidy = tidy_parse_string($html, array(), 'UTF8');
+            $tidy->cleanRepair();
+            $html = $tidy->value;
+        }
+
+        //Let Readability do the talking
+        $r = new Readability($html, $url);
+        $r->init();
+        return $r;
+
     }
 
 ?>

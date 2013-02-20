@@ -1,7 +1,7 @@
 <?php
 
     require_once('lib/common.php');
-    require_once('lib/article_meta_lib.php');
+    require_once('lib/article_read_lib.php');
 
     callMethod();
 
@@ -11,7 +11,7 @@
      **/
     function doGet()
     {
-        //Params required for GET processing
+        //Params required for POST processing
         $required = array(
             'url',
             'title'
@@ -23,9 +23,9 @@
         checkRequired($required, $availParams);
 
         //Get the data
-        $meta = getArticleMeta($availParams['url'], $availParams['title']);
+        $readable = getReadableArticle($availParams['url'], $availParams['title']);
 
-        sendData($meta, $availParams);
+        sendData($readable, $availParams);
     }
 
 ?>
