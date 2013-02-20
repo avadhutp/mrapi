@@ -1,11 +1,12 @@
 <?php
     require_once('lib/common.php');
+    require_once('lib/user_tags_lib.php');
 
     callMethod();
 
     /**
      * Handle the GET request.
-     * Provide a weighter JSON of all array tags of the given user.
+     * Provide a weighted JSON of all array tags of the given user.
      **/
     function doGet()
     {
