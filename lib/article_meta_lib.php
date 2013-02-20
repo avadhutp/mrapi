@@ -10,7 +10,8 @@
         $contents = getContentFromUrl($url);
 
         return array(
-            'image' => getImageFromHtml($contents)
+            'image' => getImageFromHtml($contents),
+            'tags' => getTagsFromText($contents)
         );
     }
 
@@ -56,7 +57,7 @@
         $calais = new OpenCalais(OPEN_CALAIS_KEY);
         $calais->get($text);
 
-        return $calais->getSocialTags();
+        return array_keys($calais->getSocialTags());
     }
 
 ?>
