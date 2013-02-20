@@ -45,7 +45,8 @@
             //Assemble the piece
             $items[] = array(
                 'title' => $item->title,
-                'url' => $url
+                'url' => $url,
+                'timestamp' => $item->publishedDate
             );
         }
 
@@ -98,26 +99,6 @@
             preg_match("/\<title\>(.*)\<\/title\>/",$str,$title);
             return $title[1];
         }
-    }
-
-    /**
-     * Get content from URL
-     **/
-    function getContentFromUrl($url, $format = 'json')
-    {
-        $query = array(
-            'url' => $url,
-            'extractor' => 'ArticleExtractor',
-            'output' => strtolower($format)
-        );
-
-        $url = BOILER_PIPE
-            . '?'
-            . http_build_query($query);
-
-        $content = file_get_contents($url);
-
-        return $content;
     }
 
 ?>
