@@ -52,7 +52,7 @@ CREATE TABLE `tags` (
   `name` varchar(255) NOT NULL,
   `cats` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,7 +61,7 @@ CREATE TABLE `tags` (
 
 LOCK TABLES `tags` WRITE;
 /*!40000 ALTER TABLE `tags` DISABLE KEYS */;
-INSERT INTO `tags` VALUES (3,NULL,'iPhone','2'),(4,NULL,'apple','2'),(5,NULL,'gaming','2'),(6,NULL,'technology','2'),(7,NULL,'movies','2'),(8,NULL,'series','2'),(9,NULL,'japan','2'),(10,NULL,'travel','2'),(11,NULL,'food','2'),(12,NULL,'tv','2'),(13,NULL,'animation','2'),(14,NULL,'education','2'),(15,NULL,'sports','2');
+INSERT INTO `tags` VALUES (3,NULL,'iPhone','2'),(4,NULL,'apple','2'),(5,NULL,'gaming','2'),(6,NULL,'technology','2'),(7,NULL,'movies','2'),(8,NULL,'series','2'),(9,NULL,'japan','2'),(10,NULL,'travel','2'),(11,NULL,'food','2'),(12,NULL,'tv','2'),(13,NULL,'animation','2'),(14,NULL,'education','2'),(15,NULL,'sports','2'),(18,NULL,'Tamikrest','2');
 /*!40000 ALTER TABLE `tags` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -78,7 +78,7 @@ CREATE TABLE `user_tags` (
   `vdna_user_id` varchar(36) NOT NULL,
   `score` float NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -87,7 +87,7 @@ CREATE TABLE `user_tags` (
 
 LOCK TABLES `user_tags` WRITE;
 /*!40000 ALTER TABLE `user_tags` DISABLE KEYS */;
-INSERT INTO `user_tags` VALUES (16,3,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.2),(17,4,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.3),(18,9,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.1),(19,5,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.18),(20,6,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.18),(21,7,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.6),(22,8,'a57a3563-e8d7sel-42cb-870c-df92ddeb8',0.35),(23,10,'a57a3563-e8d7sel-42cb-870c-df92ddeb8',0.38),(24,11,'a57a3563-e8d7sel-42cb-870c-df92ddeb8',0.9),(25,12,'a57a3563-e8d7sel-42cb-870c-df92ddeb8',0.1),(26,13,'a57a3563-e8d7sel-42cb-870c-df92ddeb8',0.67),(27,14,'a57a3563-e8d7sel-42cb-870c-df92ddeb8',0.61),(28,15,'a57a3563-e8d7sel-42cb-870c-df92ddeb8',0.11);
+INSERT INTO `user_tags` VALUES (16,3,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.2),(17,4,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.3),(18,9,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.1),(19,5,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.18),(20,6,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.18),(21,7,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.6),(22,8,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.35),(23,10,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.38),(24,11,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.9),(25,12,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.1),(26,13,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.67),(27,14,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.61),(28,15,'a57a3563-e8d7-42cb-870c-df92ddeb8618',0.11);
 /*!40000 ALTER TABLE `user_tags` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -100,4 +100,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2013-02-20 11:06:16
+-- Dump completed on 2013-02-20 13:55:50
