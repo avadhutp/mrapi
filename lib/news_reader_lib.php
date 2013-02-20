@@ -40,10 +40,14 @@
             //Get all the basic info
             $url = follow_redirect($item->link);
             $source = parse_url($url, PHP_URL_HOST);
+            $titleRaw = explode('-', $item->title);
+            $title = trim($titleRaw[0]);
+            $source = ucfirst(trim($titleRaw[1]));
 
             //Assemble the piece
             $items[] = array(
-                'title' => $item->title,
+                'title' => $title,
+                'source' => $source,
                 'url' => $url,
                 'timestamp' => $item->publishedDate
             );
