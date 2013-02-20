@@ -13,7 +13,8 @@
     {
         //Params required for POST processing
         $required = array(
-            'url'
+            'url',
+            'title'
         );
 
         $availParams = getUserData();
@@ -22,7 +23,7 @@
         checkRequired($required, $availParams);
 
         //Get the data
-        $meta = getArticleMeta($availParams['url']);
+        $meta = getArticleMeta($availParams['url'], $availParams['title']);
 
         sendData($meta, $availParams);
     }
