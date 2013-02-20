@@ -2,7 +2,6 @@
 
     define('RSS_TO_JSON_URL', 'http://ajax.googleapis.com/ajax/services/feed/load');
     define('NEWS_URL', 'http://news.google.com/news/feeds');
-    define('BOILER_PIPE', 'http://boilerpipe-web.appspot.com/extract');
 
     function getNewsForTags($tags, $num, $offset)
     {
@@ -10,7 +9,7 @@
         $query = array(
             'num' => $num,
             'start' => $offset,
-            'q' => implode(' OR ', $tags),
+            'q' => implode(' OR ', array_map('strtolower', $tags)),
             'output' => 'rss'
         );
 
